@@ -8,13 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		7A9B89C22286C7A700F9BF52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B89C12286C7A700F9BF52 /* AppDelegate.swift */; };
-		7A9B89C42286C7A700F9BF52 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B89C32286C7A700F9BF52 /* FirstViewController.swift */; };
-		7A9B89C62286C7A700F9BF52 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B89C52286C7A700F9BF52 /* SecondViewController.swift */; };
+		7A9B89C42286C7A700F9BF52 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B89C32286C7A700F9BF52 /* TranslateViewController.swift */; };
+		7A9B89C62286C7A700F9BF52 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B89C52286C7A700F9BF52 /* HistoryViewController.swift */; };
 		7A9B89C92286C7A700F9BF52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A9B89C72286C7A700F9BF52 /* Main.storyboard */; };
 		7A9B89CB2286C7A900F9BF52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A9B89CA2286C7A900F9BF52 /* Assets.xcassets */; };
 		7A9B89CE2286C7A900F9BF52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A9B89CC2286C7A900F9BF52 /* LaunchScreen.storyboard */; };
 		7A9B89D92286C7A900F9BF52 /* Sberbank_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B89D82286C7A900F9BF52 /* Sberbank_testTests.swift */; };
 		7A9B89E42286C7A900F9BF52 /* Sberbank_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B89E32286C7A900F9BF52 /* Sberbank_testUITests.swift */; };
+		7A9B89F32286C80100F9BF52 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B89F12286C80100F9BF52 /* Model.xcdatamodeld */; };
+		7A9B89F62286CA4400F9BF52 /* Translate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A9B89F52286CA4400F9BF52 /* Translate.storyboard */; };
+		7A9B89FA2286CCF100F9BF52 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A9B89F92286CCF100F9BF52 /* History.storyboard */; };
+		7A9B89FF2286CE6F00F9BF52 /* TranslatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B89FE2286CE6F00F9BF52 /* TranslatePresenter.swift */; };
+		7A9B8A012286CEE400F9BF52 /* TranslateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B8A002286CEE400F9BF52 /* TranslateConfigurator.swift */; };
+		7A9B8A032286CF9B00F9BF52 /* TranslateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B8A022286CF9B00F9BF52 /* TranslateInteractor.swift */; };
+		7A9B8A052286D02B00F9BF52 /* TranslateRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B8A042286D02B00F9BF52 /* TranslateRouterProtocol.swift */; };
+		7A9B8A072286D3DB00F9BF52 /* Translate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B8A062286D3DB00F9BF52 /* Translate.swift */; };
+		7A9B8A0A2286D69F00F9BF52 /* TranslateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B8A092286D69F00F9BF52 /* TranslateCell.swift */; };
+		7A9B8A0D2286FF3D00F9BF52 /* Language.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A9B8A0C2286FF3D00F9BF52 /* Language.storyboard */; };
+		7A9B8A0F2286FFBA00F9BF52 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B8A0E2286FFBA00F9BF52 /* LanguageViewController.swift */; };
+		7A9B8A13228704C400F9BF52 /* TranslateTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B8A12228704C400F9BF52 /* TranslateTitleView.swift */; };
+		7A9B8A15228704CE00F9BF52 /* TranslateTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A9B8A14228704CE00F9BF52 /* TranslateTitleView.xib */; };
+		7A9B8A17228718BB00F9BF52 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B8A16228718BB00F9BF52 /* Language.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +51,8 @@
 /* Begin PBXFileReference section */
 		7A9B89BE2286C7A700F9BF52 /* Sberbank test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sberbank test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A9B89C12286C7A700F9BF52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7A9B89C32286C7A700F9BF52 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		7A9B89C52286C7A700F9BF52 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		7A9B89C32286C7A700F9BF52 /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		7A9B89C52286C7A700F9BF52 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		7A9B89C82286C7A700F9BF52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A9B89CA2286C7A900F9BF52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A9B89CD2286C7A900F9BF52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +63,20 @@
 		7A9B89DF2286C7A900F9BF52 /* Sberbank testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sberbank testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A9B89E32286C7A900F9BF52 /* Sberbank_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sberbank_testUITests.swift; sourceTree = "<group>"; };
 		7A9B89E52286C7A900F9BF52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A9B89F22286C80100F9BF52 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		7A9B89F52286CA4400F9BF52 /* Translate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Translate.storyboard; sourceTree = "<group>"; };
+		7A9B89F92286CCF100F9BF52 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		7A9B89FE2286CE6F00F9BF52 /* TranslatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatePresenter.swift; sourceTree = "<group>"; };
+		7A9B8A002286CEE400F9BF52 /* TranslateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateConfigurator.swift; sourceTree = "<group>"; };
+		7A9B8A022286CF9B00F9BF52 /* TranslateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateInteractor.swift; sourceTree = "<group>"; };
+		7A9B8A042286D02B00F9BF52 /* TranslateRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateRouterProtocol.swift; sourceTree = "<group>"; };
+		7A9B8A062286D3DB00F9BF52 /* Translate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translate.swift; sourceTree = "<group>"; };
+		7A9B8A092286D69F00F9BF52 /* TranslateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateCell.swift; sourceTree = "<group>"; };
+		7A9B8A0C2286FF3D00F9BF52 /* Language.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Language.storyboard; sourceTree = "<group>"; };
+		7A9B8A0E2286FFBA00F9BF52 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		7A9B8A12228704C400F9BF52 /* TranslateTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateTitleView.swift; sourceTree = "<group>"; };
+		7A9B8A14228704CE00F9BF52 /* TranslateTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TranslateTitleView.xib; sourceTree = "<group>"; };
+		7A9B8A16228718BB00F9BF52 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +128,16 @@
 			isa = PBXGroup;
 			children = (
 				7A9B89C12286C7A700F9BF52 /* AppDelegate.swift */,
-				7A9B89C32286C7A700F9BF52 /* FirstViewController.swift */,
-				7A9B89C52286C7A700F9BF52 /* SecondViewController.swift */,
 				7A9B89C72286C7A700F9BF52 /* Main.storyboard */,
+				7A9B89F42286C80B00F9BF52 /* Model */,
+				7A9B89FB2286CDE600F9BF52 /* Translate */,
+				7A9B89FD2286CDF800F9BF52 /* History */,
+				7A9B8A0B2286FF1400F9BF52 /* Language */,
+				7A9B8A082286D68800F9BF52 /* View */,
 				7A9B89CA2286C7A900F9BF52 /* Assets.xcassets */,
 				7A9B89CC2286C7A900F9BF52 /* LaunchScreen.storyboard */,
 				7A9B89CF2286C7A900F9BF52 /* Info.plist */,
+				7A9B89F12286C80100F9BF52 /* Model.xcdatamodeld */,
 			);
 			path = "Sberbank test";
 			sourceTree = "<group>";
@@ -126,6 +158,56 @@
 				7A9B89E52286C7A900F9BF52 /* Info.plist */,
 			);
 			path = "Sberbank testUITests";
+			sourceTree = "<group>";
+		};
+		7A9B89F42286C80B00F9BF52 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A9B8A062286D3DB00F9BF52 /* Translate.swift */,
+				7A9B8A16228718BB00F9BF52 /* Language.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7A9B89FB2286CDE600F9BF52 /* Translate */ = {
+			isa = PBXGroup;
+			children = (
+				7A9B89F52286CA4400F9BF52 /* Translate.storyboard */,
+				7A9B89C32286C7A700F9BF52 /* TranslateViewController.swift */,
+				7A9B8A002286CEE400F9BF52 /* TranslateConfigurator.swift */,
+				7A9B89FE2286CE6F00F9BF52 /* TranslatePresenter.swift */,
+				7A9B8A022286CF9B00F9BF52 /* TranslateInteractor.swift */,
+				7A9B8A042286D02B00F9BF52 /* TranslateRouterProtocol.swift */,
+			);
+			path = Translate;
+			sourceTree = "<group>";
+		};
+		7A9B89FD2286CDF800F9BF52 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				7A9B89F92286CCF100F9BF52 /* History.storyboard */,
+				7A9B89C52286C7A700F9BF52 /* HistoryViewController.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		7A9B8A082286D68800F9BF52 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7A9B8A092286D69F00F9BF52 /* TranslateCell.swift */,
+				7A9B8A12228704C400F9BF52 /* TranslateTitleView.swift */,
+				7A9B8A14228704CE00F9BF52 /* TranslateTitleView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7A9B8A0B2286FF1400F9BF52 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				7A9B8A0C2286FF3D00F9BF52 /* Language.storyboard */,
+				7A9B8A0E2286FFBA00F9BF52 /* LanguageViewController.swift */,
+			);
+			path = Language;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +314,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A9B8A0D2286FF3D00F9BF52 /* Language.storyboard in Resources */,
+				7A9B8A15228704CE00F9BF52 /* TranslateTitleView.xib in Resources */,
 				7A9B89CE2286C7A900F9BF52 /* LaunchScreen.storyboard in Resources */,
+				7A9B89F62286CA4400F9BF52 /* Translate.storyboard in Resources */,
 				7A9B89CB2286C7A900F9BF52 /* Assets.xcassets in Resources */,
 				7A9B89C92286C7A700F9BF52 /* Main.storyboard in Resources */,
+				7A9B89FA2286CCF100F9BF52 /* History.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +345,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A9B89C62286C7A700F9BF52 /* SecondViewController.swift in Sources */,
+				7A9B89C62286C7A700F9BF52 /* HistoryViewController.swift in Sources */,
+				7A9B8A052286D02B00F9BF52 /* TranslateRouterProtocol.swift in Sources */,
+				7A9B8A0A2286D69F00F9BF52 /* TranslateCell.swift in Sources */,
+				7A9B8A012286CEE400F9BF52 /* TranslateConfigurator.swift in Sources */,
 				7A9B89C22286C7A700F9BF52 /* AppDelegate.swift in Sources */,
-				7A9B89C42286C7A700F9BF52 /* FirstViewController.swift in Sources */,
+				7A9B89C42286C7A700F9BF52 /* TranslateViewController.swift in Sources */,
+				7A9B8A072286D3DB00F9BF52 /* Translate.swift in Sources */,
+				7A9B8A032286CF9B00F9BF52 /* TranslateInteractor.swift in Sources */,
+				7A9B8A17228718BB00F9BF52 /* Language.swift in Sources */,
+				7A9B8A0F2286FFBA00F9BF52 /* LanguageViewController.swift in Sources */,
+				7A9B89F32286C80100F9BF52 /* Model.xcdatamodeld in Sources */,
+				7A9B8A13228704C400F9BF52 /* TranslateTitleView.swift in Sources */,
+				7A9B89FF2286CE6F00F9BF52 /* TranslatePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +680,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7A9B89F12286C80100F9BF52 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7A9B89F22286C80100F9BF52 /* Model.xcdatamodel */,
+			);
+			currentVersion = 7A9B89F22286C80100F9BF52 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7A9B89B62286C7A700F9BF52 /* Project object */;
 }

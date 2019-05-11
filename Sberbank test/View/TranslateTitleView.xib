@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TranslateTitleView" customModule="Sberbank_test" customModuleProvider="target">
+            <connections>
+                <outlet property="changeTranslateDirectionButton" destination="642-Mz-P4C" id="UIm-zt-XKJ"/>
+                <outlet property="contentView" destination="FVZ-0b-oAK" id="BUp-FA-Ldb"/>
+                <outlet property="destinationLangButton" destination="MMc-qj-c6Q" id="YzP-mF-7wL"/>
+                <outlet property="sourseLangButton" destination="PUf-Hn-8YV" id="alI-mM-Dfg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="256" height="42"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FVZ-0b-oAK">
+                    <rect key="frame" x="0.0" y="0.0" width="256" height="42"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUf-Hn-8YV">
+                            <rect key="frame" x="36" y="12" width="54" height="30"/>
+                            <state key="normal" title="Russian">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="sourceLangButtonTap:" destination="-1" eventType="touchUpInside" id="jCw-bc-h3E"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="642-Mz-P4C">
+                            <rect key="frame" x="98" y="15" width="60" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="KXj-je-fcS"/>
+                                <constraint firstAttribute="height" constant="24" id="fCJ-DM-VCA"/>
+                            </constraints>
+                            <state key="normal" image="change"/>
+                            <connections>
+                                <action selector="swapLanguageButtonTap:" destination="-1" eventType="touchUpInside" id="fX4-4e-QvA"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMc-qj-c6Q">
+                            <rect key="frame" x="166" y="12" width="50" height="30"/>
+                            <state key="normal" title="English">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="destinationLangButtonTap:" destination="-1" eventType="touchUpInside" id="Yoh-Sc-m3z"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="642-Mz-P4C" firstAttribute="centerY" secondItem="PUf-Hn-8YV" secondAttribute="centerY" id="EFl-xF-gfe"/>
+                        <constraint firstItem="MMc-qj-c6Q" firstAttribute="leading" secondItem="642-Mz-P4C" secondAttribute="trailing" constant="8" id="PIh-ww-dxy"/>
+                        <constraint firstAttribute="bottom" secondItem="PUf-Hn-8YV" secondAttribute="bottom" id="Zyq-2l-peg"/>
+                        <constraint firstAttribute="bottom" secondItem="MMc-qj-c6Q" secondAttribute="bottom" id="dGd-xa-l1h"/>
+                        <constraint firstItem="642-Mz-P4C" firstAttribute="leading" secondItem="PUf-Hn-8YV" secondAttribute="trailing" constant="8" id="e7z-cn-uI6"/>
+                        <constraint firstItem="642-Mz-P4C" firstAttribute="centerX" secondItem="FVZ-0b-oAK" secondAttribute="centerX" id="kW3-VE-ItH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="FVZ-0b-oAK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Hx9-2p-QzL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FVZ-0b-oAK" secondAttribute="trailing" id="MJJ-q9-XbB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="FVZ-0b-oAK" secondAttribute="bottom" id="Sbf-ex-MSm"/>
+                <constraint firstItem="FVZ-0b-oAK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="idd-JW-DNm"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="62.399999999999999" y="254.57271364317842"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="change" width="24" height="24"/>
+    </resources>
+</document>
