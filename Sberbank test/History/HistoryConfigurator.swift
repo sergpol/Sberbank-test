@@ -23,6 +23,15 @@ class HistoryConfigurator: HistoryConfiguratorProtocol {
         viewController.searchController.searchBar.delegate = viewController
         viewController.searchController.searchBar.barTintColor = UIColor.black
         
+        if let textfield = viewController.searchController.searchBar.value(forKey: "searchField") as? UITextField {
+            if let backgroundview = textfield.subviews.first {
+                backgroundview.backgroundColor = UIColor.white
+
+                backgroundview.layer.cornerRadius = 10;
+                backgroundview.clipsToBounds = true;
+            }
+        }
+        
         UISearchBar.appearance().tintColor = .black
         
         viewController.navigationItem.hidesSearchBarWhenScrolling = false
