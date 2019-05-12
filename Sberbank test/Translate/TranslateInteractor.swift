@@ -42,19 +42,20 @@ class TranslateInteractor: TranslateInteractorProtocol {
             var errorString: String?
             if let error = error {
                 errorString = error.localizedDescription
+                completion?([errorString!])
             } else if let data = data, let langs = try? self.decoder.decode([String].self, from: data) {
                 print("# translates: \(langs)")
+                completion?(langs)
             } else {
                 errorString = "Неизвестная ошибка"
+                completion?([errorString!])
             }
-            //completion?(errorString)
         }
         task.resume()
     }
     
     func getTranslateResult(text: String, direction: String, completion: (([String]) -> Void)?) {
         let url = URL(string: "\(urlTranslateSource)?key=\(apiKey)&lang=\(direction)&text=\(text)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
-        print(url.absoluteString)
         let task = URLSession(configuration: .default).dataTask(with: url) { [unowned self] data, response, error in
             var errorString: String?
             if let error = error {
@@ -81,7 +82,6 @@ class TranslateInteractor: TranslateInteractorProtocol {
         translateResult.setValue(translatedText, forKeyPath: "translatedText")
         do {
             try managedContext.save()
-            print("#Saved!")
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }

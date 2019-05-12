@@ -57,7 +57,6 @@ class TranslateViewController: UIViewController {
             interactor.getTranslateResult(text: text, direction: "\(sourceLanguage.code)-\(destinationLanguage.code)", completion: { [weak self] (result) in
                 guard let self = self else { return }
                 
-                print("# translates: \(result)")
                 let translatedText = result.joined()
                 self.translatedText = translatedText
                 DispatchQueue.main.async {
