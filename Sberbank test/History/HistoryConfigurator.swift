@@ -23,6 +23,8 @@ class HistoryConfigurator: HistoryConfiguratorProtocol {
         viewController.searchController.searchBar.delegate = viewController
         viewController.searchController.searchBar.barTintColor = UIColor.black
         
+        UISearchBar.appearance().tintColor = .black
+        
         viewController.navigationItem.hidesSearchBarWhenScrolling = false
         viewController.navigationItem.searchController = viewController.searchController
         
