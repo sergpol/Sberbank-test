@@ -29,7 +29,6 @@
 		7A9B8A13228704C400F9BF52 /* TranslateTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B8A12228704C400F9BF52 /* TranslateTitleView.swift */; };
 		7A9B8A15228704CE00F9BF52 /* TranslateTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A9B8A14228704CE00F9BF52 /* TranslateTitleView.xib */; };
 		7A9B8A17228718BB00F9BF52 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B8A16228718BB00F9BF52 /* Language.swift */; };
-		7A9B8A192287425A00F9BF52 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B8A182287425A00F9BF52 /* StartViewController.swift */; };
 		7A9B8A1B2288216E00F9BF52 /* LanguageConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B8A1A2288216E00F9BF52 /* LanguageConfigurator.swift */; };
 		7A9B8A1D2288224100F9BF52 /* LanguageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B8A1C2288224100F9BF52 /* LanguageRouter.swift */; };
 		7A9B8A6322883E4C00F9BF52 /* HistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B8A6222883E4C00F9BF52 /* HistoryInteractor.swift */; };
@@ -83,7 +82,6 @@
 		7A9B8A12228704C400F9BF52 /* TranslateTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateTitleView.swift; sourceTree = "<group>"; };
 		7A9B8A14228704CE00F9BF52 /* TranslateTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TranslateTitleView.xib; sourceTree = "<group>"; };
 		7A9B8A16228718BB00F9BF52 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
-		7A9B8A182287425A00F9BF52 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		7A9B8A1A2288216E00F9BF52 /* LanguageConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageConfigurator.swift; sourceTree = "<group>"; };
 		7A9B8A1C2288224100F9BF52 /* LanguageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageRouter.swift; sourceTree = "<group>"; };
 		7A9B8A212288324200F9BF52 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -142,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				7A9B89C12286C7A700F9BF52 /* AppDelegate.swift */,
-				7A9B8A182287425A00F9BF52 /* StartViewController.swift */,
 				7A9B89C72286C7A700F9BF52 /* Main.storyboard */,
 				7A9B89F42286C80B00F9BF52 /* Model */,
 				7A9B89FB2286CDE600F9BF52 /* Translate */,
@@ -384,7 +381,6 @@
 				7A9B89C62286C7A700F9BF52 /* HistoryViewController.swift in Sources */,
 				7A9B8A6522883F2400F9BF52 /* HistoryConfigurator.swift in Sources */,
 				7A9B8A1B2288216E00F9BF52 /* LanguageConfigurator.swift in Sources */,
-				7A9B8A192287425A00F9BF52 /* StartViewController.swift in Sources */,
 				7A9B8A052286D02B00F9BF52 /* TranslateRouterProtocol.swift in Sources */,
 				7A9B8A1D2288224100F9BF52 /* LanguageRouter.swift in Sources */,
 				7A9B8A0A2286D69F00F9BF52 /* TranslateCell.swift in Sources */,
