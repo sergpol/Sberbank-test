@@ -92,11 +92,12 @@
             <objects>
                 <viewController id="Asy-ke-ut5" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lsd-VF-1oq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Vu9-0q-YXE"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="tCV-Se-Bub"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWu-05-HZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
