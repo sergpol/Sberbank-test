@@ -28,8 +28,6 @@ extension TranslateCell: UITextViewDelegate {
             self.placeholderLabel.alpha = textView.text.isEmpty ? 1 : 0
         })
         
-        if !textView.text.isEmpty {
-            textViewDidChangeCompletion()
-        }
+        textViewDidChangeCompletion()
     }
 }

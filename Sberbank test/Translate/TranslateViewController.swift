@@ -28,7 +28,7 @@ class TranslateViewController: UIViewController {
     var sourceLanguage: Language!
     var destinationLanguage: Language!
     
-    var sourceText: String = ""
+    var text: String = ""
     var translatedText: String = ""
     
     override func viewDidLoad() {
@@ -41,20 +41,24 @@ class TranslateViewController: UIViewController {
     }
     
     @objc func performTranslate(_ sender: UITextView) {
-        sourceText = sender.text
+        text = sender.text
         makeTranslate()
     }
     
     func makeTranslate() {
-        if sourceText.isEmpty {
+        if text.isEmpty {
+            translatedText = ""
             tableView.reloadData()
         }
         else {
-            interactor.getTranslateResult(text: sourceText, direction: "\(sourceLanguage.code)-\(destinationLanguage.code)", completion: { [weak self] (result) in
+            interactor.getTranslateResult(text: text, direction: "\(sourceLanguage.code)-\(destinationLanguage.code)", completion: { [weak self] (result) in
+                guard let self = self else { return }
                 print("# translates: \(result)")
-                self?.translatedText = result.joined()
+                let translatedText = result.joined()
+                self.translatedText = translatedText
                 DispatchQueue.main.async {
-                    self?.tableView.reloadRows(at: [IndexPath(row: 1, section: 0)], with: .automatic)
+                    self.tableView.reloadRows(at: [IndexPath(row: 1, section: 0)], with: .automatic)
+                    self.interactor.saveTranslateResult(text: self.text, translatedText: translatedText)
                 }
             })
         }
@@ -101,7 +105,7 @@ extension TranslateViewController: UITableViewDelegate, UITableViewDataSource {
             cell.textViewDidChangeCompletion = { [weak self] in
                 guard let self = self else { return }
                 NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(self.performTranslate(_:)), object: cell.textView)
-                self.perform(#selector(self.performTranslate(_:)), with: cell.textView, afterDelay: 0.5)
+                self.perform(#selector(self.performTranslate(_:)), with: cell.textView, afterDelay: 1)
             }
         default:
             cell.textView.text = translatedText

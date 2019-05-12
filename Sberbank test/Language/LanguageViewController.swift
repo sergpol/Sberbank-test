@@ -12,14 +12,22 @@ import UIKit
 class LanguageViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    var languages: [Language] = [Language(name: "English", code: "en"),
-                                Language(name: "Russian", code: "ru"),
-                                Language(name: "Spanish", code: "es")]
+    var languages: [Language] = []
     var selectedLanguage: Language!
     var selectSourceLanguage = true
     
+    var configurator: LanguageConfiguratorProtocol! = LanguageConfigurator()
+    var router: LanguageRouterProtocol!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        configurator.configure(with: self)
+        router = LanguageRouter(viewController: self)
+    }
+    
     @IBAction func close(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        router.closeCurrentViewController()
     }
 }
 

@@ -8,11 +8,13 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 protocol TranslateInteractorProtocol: class {
     var urlTranslateSource: String { get }
     func getSupportedLangs(text: String, completion: (([String]) -> Void)?)
     func getTranslateResult(text: String, direction: String, completion: (([String]) -> Void)?)
+    func saveTranslateResult(text: String, translatedText: String?)
 }
 
 class TranslateInteractor: TranslateInteractorProtocol {
@@ -59,12 +61,29 @@ class TranslateInteractor: TranslateInteractorProtocol {
                 errorString = error.localizedDescription
                 completion?([errorString!])
             } else if let data = data, let translate = try? self.decoder.decode(Translate.self, from: data) {
-                completion?(translate.text ?? ["empty"])
+                completion?(translate.text ?? [""])
             } else {
                 errorString = "Неизвестная ошибка"
                 completion?([errorString!])
             }
         }
         task.resume()
+    }
+    
+    func saveTranslateResult(text: String, translatedText: String?) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "TranslateResult", in: managedContext)!
+        let translateResult = NSManagedObject(entity: entity, insertInto: managedContext)
+        translateResult.setValue(text, forKeyPath: "text")
+        translateResult.setValue(translatedText, forKeyPath: "translatedText")
+        do {
+            try managedContext.save()
+            print("#Saved!")
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
     }
 }

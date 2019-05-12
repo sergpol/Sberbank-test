@@ -14,9 +14,6 @@ protocol TranslateConfiguratorProtocol: class {
 }
 
 class TranslateConfigurator: TranslateConfiguratorProtocol {
-    var translatedString: String = ""
-    var tableView: UITableView!
-    
     func configure(with viewController: TranslateViewController) {
         viewController.sourceLanguage = Language(name: "English", code: "en")
         viewController.destinationLanguage = Language(name: "Russian", code: "ru")
@@ -24,8 +21,7 @@ class TranslateConfigurator: TranslateConfiguratorProtocol {
         viewController.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         viewController.navigationController?.navigationBar.shadowImage = UIImage()
         
-        self.tableView = viewController.tableView
-        self.tableView.tableFooterView = UIView()
-        self.tableView.estimatedRowHeight = 160
+        viewController.tableView.tableFooterView = UIView()
+        viewController.tableView.estimatedRowHeight = 160
     }
 }
