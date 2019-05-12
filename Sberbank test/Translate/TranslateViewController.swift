@@ -20,6 +20,7 @@ protocol TranslateViewProtocol {
 
 class TranslateViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let interactor: TranslateInteractorProtocol! = TranslateInteractor()
     var presenter: TranslatePresenterProtocol!
@@ -51,12 +52,16 @@ class TranslateViewController: UIViewController {
             tableView.reloadData()
         }
         else {
+            activityIndicator.startAnimating()
+            
             interactor.getTranslateResult(text: text, direction: "\(sourceLanguage.code)-\(destinationLanguage.code)", completion: { [weak self] (result) in
                 guard let self = self else { return }
+                
                 print("# translates: \(result)")
                 let translatedText = result.joined()
                 self.translatedText = translatedText
                 DispatchQueue.main.async {
+                    self.activityIndicator.stopAnimating()
                     self.tableView.reloadRows(at: [IndexPath(row: 1, section: 0)], with: .automatic)
                     self.interactor.saveTranslateResult(text: self.text, translatedText: translatedText)
                 }

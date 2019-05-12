@@ -54,12 +54,19 @@ class HistoryViewController: UIViewController {
     }
     
     @IBAction func deleteAll(_ sender: UIBarButtonItem) {
-        interactor.deleteAll(completion: { [weak self] (success) in
-            if success {
-                self?.translateResults.removeAll()
-                self?.tableView.reloadData()
-            }
+        let alertController = UIAlertController(title: "Attention!", message: "This action delete all saved words/sentenses! Continue?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .destructive, handler: { [weak self] (action) in
+            self?.interactor.deleteAll(completion: { [weak self] (success) in
+                if success {
+                    self?.translateResults.removeAll()
+                    self?.tableView.reloadData()
+                }
+            })
         })
+        
+        alertController.addAction(okAction)
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+        present(alertController, animated: true, completion: nil)
     }
 }
 
@@ -74,6 +81,18 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         cell.txtLabel?.text = translateResult.text
         cell.translatedTextLabel?.text = translateResult.translatedText
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            let translateResult = translateResults[indexPath.row]
+            interactor.deleteTranslate(text: translateResult.text ?? "", translatedText: translateResult.translatedText ?? "", completion: { [weak self] (success) in
+                if success {
+                    self?.translateResults.remove(at: indexPath.row)
+                    self?.tableView.deleteRows(at: [indexPath], with: .automatic)
+                }
+            })
+        }
     }
 }
 

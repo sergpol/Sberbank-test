@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mug-VG-LJQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mug-VG-LJQ">
                                 <rect key="frame" x="8" y="52" width="398" height="836"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -70,18 +70,24 @@
                                     <outlet property="delegate" destination="y9N-zj-SCI" id="ART-ft-pMo"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="cY9-ad-dM9">
+                                <rect key="frame" x="197" y="443" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.96470588239999999" green="0.84820761570000003" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Mug-VG-LJQ" firstAttribute="top" secondItem="ysS-Bz-RbO" secondAttribute="top" constant="8" id="7Wd-Z4-zyK"/>
                             <constraint firstItem="ysS-Bz-RbO" firstAttribute="trailing" secondItem="Mug-VG-LJQ" secondAttribute="trailing" constant="8" id="FNS-n4-kvZ"/>
+                            <constraint firstItem="cY9-ad-dM9" firstAttribute="centerX" secondItem="ysS-Bz-RbO" secondAttribute="centerX" id="ZFt-fp-XQp"/>
                             <constraint firstItem="Mug-VG-LJQ" firstAttribute="bottom" secondItem="aKA-HU-eMD" secondAttribute="bottom" constant="-8" id="ezp-sf-NBz"/>
+                            <constraint firstItem="cY9-ad-dM9" firstAttribute="centerY" secondItem="ysS-Bz-RbO" secondAttribute="centerY" id="gJB-eP-adP"/>
                             <constraint firstItem="Mug-VG-LJQ" firstAttribute="leading" secondItem="ysS-Bz-RbO" secondAttribute="leading" constant="8" id="nwg-td-WlL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ysS-Bz-RbO"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="cY9-ad-dM9" id="epB-He-5cg"/>
                         <outlet property="tableView" destination="Mug-VG-LJQ" id="Cpg-ln-rFE"/>
                         <segue destination="Xh8-ws-rkK" kind="show" identifier="toSelectSourceLanguage" id="C8E-0X-eoH"/>
                         <segue destination="Xh8-ws-rkK" kind="show" identifier="toSelectDestinationLanguage" id="Mwm-qH-Jfw"/>
