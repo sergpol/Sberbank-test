@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol TranslateViewProtocol {
+protocol TranslateViewProtocol: class {
     func setTitleView()
     func setSourceLanguage(language: Language)
     func setDestinationLanguage(language: Language)

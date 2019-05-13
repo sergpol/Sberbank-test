@@ -21,7 +21,7 @@ protocol TranslatePresenterProtocol: class {
 }
 
 class TranslatePresenter: TranslatePresenterProtocol {
-    var view: TranslateViewProtocol!
+    weak var view: TranslateViewProtocol!
     var router: TranslateRouterProtocol!
     
     required init(view: TranslateViewProtocol) {
